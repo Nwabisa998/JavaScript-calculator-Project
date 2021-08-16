@@ -15,4 +15,64 @@ body{
 
 
 }
+.calculator-grid{
+display:grid;
+justify-content: center;
+align-content: center;
+min-height:100vh ;
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: minmax(120, auto)repeat(5, 100px);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+padding: 20px;
+text-align: center;
 
+
+}
+.calculator-grid>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid olive;
+    outline: none;
+    background-color: palegoldenrod;
+    transition: background-color .5s;
+
+
+}
+.calculator-grid>button:hover{
+    background-color:orange;
+
+}
+.span-two{
+grid-column: span 2;
+
+}
+.output{
+grid-column: 1/-1;
+background-color: orange;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+flex-direction: column;
+padding: 10px;
+word-wrap: break-word;
+word-break: break-all;
+
+}
+.output .previous-operand{
+color: pink;
+font-size: 1,5rem;
+
+}
+.output .current-operand{
+color: plum;
+font-size: 1,5rem;
+
+
+
+
+
+}
